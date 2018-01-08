@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-body">
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+        <ion-icon [name]="item.icon" item-left></ion-icon>
+        {{item.title}}
+        <div class="item-note" item-right>
+          {{item.note}}
+        </div>
+      </button>
+    </ion-list>
+    <!-- <ion-content class="container">
+    <div class="swip-content" [class.jump]="dojump" swipable="true" (ionDrag)="ondrag($event)" (ionSwipe)="delete(item)">
+      <p>
+        this is swip content
+      </p>
+      <p>
+        this is swip content
+      </p>
+      <p>
+        this is swip content
+      </p>
+    </div>
+  </ion-content> -->
+    <div *ngIf="selectedItem" padding>
+      You navigated here from
+      <b>{{selectedItem.title}}</b>
+    </div>
+
+    <div class="dark-bg" *ngIf="dojump" [style.opacity]="activeBg"></div>
+    <ul class="container" [class.dojump]="dojump" swing-stack [stackConfig]="stackConfig" #myswing1 (throwoutleft)="onThrowOut($event)">
+      <li class="swip-content" #mycards1 swing-card>
+
+
+        <ion-list class="body" padding>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/img/images.jpg" class="avatar">
+            </ion-avatar>
+            <h3 class="grn-text">David</h3>
+            <h4 class="ph">+454553223</h4>
+          </ion-item>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/img/images.jpg" class="avatar">
+            </ion-avatar>
+            <h3 class="grn-text">David</h3>
+            <h4 class="ph">+454553223</h4>
+          </ion-item>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/img/images.jpg" class="avatar">
+            </ion-avatar>
+            <h3 class="grn-text">David</h3>
+            <h4 class="ph">+454553223</h4>
+          </ion-item>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/img/images.jpg" class="avatar">
+            </ion-avatar>
+            <h3 class="grn-text">David</h3>
+            <h4 class="ph">+454553223</h4>
+          </ion-item>
+
+        </ion-list>
+
+      </li>
+    </ul>
+  </div>
+</ion-content>

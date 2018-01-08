@@ -1,0 +1,92 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../assets/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url('../assets/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+         url('../assets/fonts/MaterialIcons-Regular.woff') format('woff'),
+         url('../assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5em;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  
+  /* fonts  */
+
+  ion-navbar,ion-title,ion-footer,ion-footer .toolbar-content{
+    font-family: 'robotoregular' !important;
+    font-size: 17px; 
+
+}
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border: none;
+}
+
+
+
+.toolbar-title-md,.toolbar-title-ios {
+    font-weight: normal;
+    text-transform: capitalize;
+    font-family: 'robotoregular';
+}
+
+
+/* lists and items */
+.list-md .item-block .item-inner, .list-md .item-input:last-child, .list-ios .item-block .item-inner, .list-ios .item-input:last-child {
+    border: none;
+    padding-right: 0;
+}
+
+.item-md.item-block .item-inner,.item-ios.item-block .item-inner {
+    border: none;
+}
+
+.item-md,.item-ios {
+    padding-left: 0px;
+    padding-right:0px;
+}
+.list-ios,.list-md {
+    margin: 0 0;
+}
+/* lists and items */

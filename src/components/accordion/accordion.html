@@ -1,0 +1,7 @@
+<ion-card *ngFor="let card of cards">
+  <ion-card-header (click)="toggleAccordion(card.id)">
+    {{card.title}}
+  </ion-card-header>
+  <ion-card-content #cc>{{card.desc}}
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar [class.show-background]="showToolbar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title [hidden]="!showToolbar">myparallax</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content parallax class="content" (ionScroll)="onScroll($event)">
+  <div text-center class="big" [class.transition]="transition" [style.height]="headerImgSize">
+    <h1 text-center *ngIf="!showToolbar">myparallax</h1>
+  </div>
+
+  <ion-list class="body" padding>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/images.jpg" class="avatar">
+      </ion-avatar>
+      <h3 class="grn-text">David</h3>
+      <h4 class="ph">+454553223</h4>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/images.jpg" class="avatar">
+      </ion-avatar>
+      <h3 class="grn-text">David</h3>
+      <h4 class="ph">+454553223</h4>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/images.jpg" class="avatar">
+      </ion-avatar>
+      <h3 class="grn-text">David</h3>
+      <h4 class="ph">+454553223</h4>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/images.jpg" class="avatar">
+      </ion-avatar>
+      <h3 class="grn-text">David</h3>
+      <h4 class="ph">+454553223</h4>
+    </ion-item>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+      layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+      using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+      page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+      sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+      (injected humour and the like).
+
+    </p>
+  </ion-list>
+
+
+
+</ion-content>

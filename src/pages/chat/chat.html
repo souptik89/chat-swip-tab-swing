@@ -1,0 +1,205 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="user fixed-content">
+      <ion-row>
+        <ion-col col-8 class="user_left" (click)="jobdetails()">
+          <ion-item>
+            <ion-avatar item-left>
+              <img src="assets/img/images.jpg" class="avatar">
+            </ion-avatar>
+            <p class="grn-text">David</p>
+            <p class="ph">+454553223</p>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 class="user_right">
+          <!-- <ion-item>
+              <p text-right>Michael</p>
+              <ion-avatar item-right>
+                <img src="assets/img/images.jpg" class="avatar">
+              </ion-avatar>
+            </ion-item> -->
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="chat" no-bounce>
+
+  <ion-list class="messages">
+
+    <div class="message-left">
+      <p>Hi,I am your worker.</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+      </p>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+        <i class="material-icons">done</i>
+      </p>
+    </div>
+
+    <div class="message-left">
+      <p>Hi,I am your worker.</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+      </p>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+        <i class="material-icons">done</i>
+      </p>
+    </div>
+
+
+    <div class="message-left">
+      <p>Hi,I am your worker.</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+      </p>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+        <i class="material-icons">done</i>
+      </p>
+    </div>
+
+    <div class="message-left">
+      <p>Hi,I am your worker.</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+      </p>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+        <i class="material-icons">done</i>
+      </p>
+    </div>
+
+
+    <div class="message-left">
+      <p>Hi,I am your worker.</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+      </p>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+        <i class="material-icons">done</i>
+      </p>
+    </div>
+
+    <div class="message-left">
+      <p>Hi,I am your worker.</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+      </p>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <p class="date" item-right>
+        <span>22.02.2017</span>
+        <span>03.45pm</span>
+        <i class="material-icons">done</i>
+      </p>
+    </div>
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer no-border>
+  <div *ngIf="attch">
+    <div class="attach-ops animation-target">
+      <ion-list class="list-wrap">
+        <p>
+          <i class="material-icons">folder_special</i>Document</p>
+        <p>
+          <i class="material-icons">photo_library</i>Gallery</p>
+        <p>
+          <i class="material-icons">place</i>Location</p>
+      </ion-list>
+    </div>
+  </div>
+  <div class="recorder" *ngIf="recoder_box_show">
+    <div class="col-wrap">
+      <div class="icon-timer">
+        <ion-icon name="mic"></ion-icon>
+        <p>03:30</p>
+      </div>
+      <div class="btn-group">
+        <p text-center>cancel</p>
+        <p text-center>send</p>
+      </div>
+    </div>
+  </div>
+  <ion-toolbar class="msg" color="footer-white">
+    <div class="in">
+      <div class="text-box" *ngIf="!slide">
+        <i class="material-icons" (click)="showattch()">mood</i>
+
+        <ion-textarea [(ngModel)]="val" rows="1" autoresize placeholder="Type Message Here..." (keyup)="hidecam($event)"></ion-textarea>
+
+        <div class="attch-btns">
+          <i class="material-icons" (click)="showattch()">attach_file</i>
+          <i class="material-icons" *ngIf="camicon">camera_alt</i>
+        </div>
+      </div>
+
+      <div class="text-box2" *ngIf="slide">
+        <i class="material-icons">delete_sweep</i>
+        <i class="material-icons" [class.del]="active">delete_sweep</i>
+        <p>
+          <span id="timer">10:00</span>
+          <span id="txt">slide to delete</span>
+        </p>
+
+      </div>
+
+    </div>
+    <!-- on keyboard open send button -->
+    <button ion-button end small (click)="sendMessage()" [disabled]="msg === ' '" *ngIf="cambutton">
+      <i class="material-icons">send</i>
+    </button>
+    <!-- voice message button -->
+    <ul *ngIf="!cambutton" class="stack" swing-stack [stackConfig]="stackConfig" (throwoutleft)="onThrowOut($event)">
+      <li swing-card>
+        <button ion-button end small class="record" [class.big]="btn_active" (press)="recording()" (pressup)="recordfinish()">
+          <i class="material-icons">keyboard_voice</i>
+        </button>
+      </li>
+    </ul>
+
+  </ion-toolbar>
+</ion-footer>

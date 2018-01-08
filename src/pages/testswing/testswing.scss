@@ -1,0 +1,25 @@
+page-testswing {
+    #source p {
+        position: relative;
+    }
+    #source p::after {
+        position: absolute;
+        top: 0;
+        right: 0%;
+        content: ' ';
+        display: block;
+        background-color: #fff;
+        height: 100%;
+        width: 4px;
+        filter: blur(4px);
+        animation: light 2s 3s linear forwards infinite !important;
+    }
+    @keyframes light {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-9999%);
+        }
+    }
+}
