@@ -25,7 +25,7 @@ export class ListPage {
 
   showToolbar: boolean = false;
   transition: boolean = false;
-  activeBg: any = '80%';
+  activeBg: any = '0%';
   dojump: boolean = false;
   selectedItem: any;
   icons: string[];
@@ -141,7 +141,7 @@ export class ListPage {
       this.dojump = false;
     }
     else {
-      x = 0;
+      x = x;
       y = y;
 
     }

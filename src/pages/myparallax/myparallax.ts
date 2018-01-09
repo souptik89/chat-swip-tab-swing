@@ -24,7 +24,7 @@ export class MyparallaxPage {
   }
   onScroll($event: any) {
     let scrollTop = $event.scrollTop;
-    this.showToolbar = scrollTop >= 120;
+    this.showToolbar = scrollTop >= 116;
     console.log(scrollTop);
     if (scrollTop < 0) {
       this.transition = false;
