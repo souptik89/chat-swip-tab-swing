@@ -24,6 +24,9 @@ page-list {
             .item-block {
                 color: #efefef;
                 background-color: transparent;
+                ion-label {
+                    padding: 1px 0px 0px;
+                }
                 ion-avatar {
                     border-radius: 50%;
                     overflow: hidden;
