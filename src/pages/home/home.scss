@@ -1,3 +1,64 @@
 page-home {
-
+    .scroll-content {
+        background: #000000;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #434343, #000000);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #434343, #000000);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .main-title {
+            font-size: 1.7rem;
+            font-weight: 400;
+            text-align: center;
+            position: relative;
+            margin-top: 16px;
+            color: #a1a1a1;
+        }
+        .main-title::before,
+        .main-title::after {
+            position: absolute;
+            top: 56%;
+            width: 60px;
+            height: 1px;
+            content: ' ';
+            background-color: rgba(97, 97, 97, 0.44);
+            display: block;
+        }
+        .main-title::before {
+            left: 0px;
+        }
+        .main-title::after {
+            right: 0px;
+        }
+        .main-cat {
+            margin: 20px auto;
+            padding: 0px 0px;
+            .col {
+                padding: 0px 0px;
+                align-items: center;
+                justify-content: center;
+                .card {
+                    margin: 0px auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .img-wrap {
+                        width: 70px;
+                        height: 70px;
+                        overflow: hidden;
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                    .itemtitle {
+                        color: #cecece;
+                    }
+                }
+            }
+            .col:last-child {
+                border-left: 1px solid rgba(97, 97, 97, 0.44);
+            }
+        }
+    }
 }

@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Chat } from '../pages/chat/chat';
+import { AccordionPage } from '../pages/accordion/accordion';
 import { MyparallaxPage } from '../pages/myparallax/myparallax';
 import { TestswingPage } from '../pages/testswing/testswing';
 import { SwiptabPage } from '../pages/swiptab/swiptab';
@@ -17,7 +18,7 @@ import { SlidingitemPage } from '../pages/slidingitem/slidingitem';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ListPage;
+  rootPage: any = HomePage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -28,6 +29,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
+      { title: 'Accordion', component: AccordionPage },
       { title: 'Chat', component: Chat },
       { title: 'parallax', component: MyparallaxPage },
       { title: 'TestswingPage', component: TestswingPage },

@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Chat } from '../pages/chat/chat';
+import { AccordionPage } from '../pages/accordion/accordion';
 import { MyparallaxPage } from '../pages/myparallax/myparallax';
 import { TextgrowDirective } from '../directives/textgrow/textgrow';
 import { ParallaxDirective } from '../directives/parallax/parallax';
@@ -24,6 +25,7 @@ import { IonicSwingModule } from 'ionic-swing';
     HomePage,
     ListPage,
     Chat,
+    AccordionPage,
     MyparallaxPage,
     TextgrowDirective,
     ParallaxDirective,
@@ -43,6 +45,7 @@ import { IonicSwingModule } from 'ionic-swing';
     HomePage,
     ListPage,
     Chat,
+    AccordionPage,
     MyparallaxPage,
     TestswingPage,
     SwiptabPage,
